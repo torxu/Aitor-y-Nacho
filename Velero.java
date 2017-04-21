@@ -5,7 +5,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Velero
+public class Velero extends Barco
 {
     // instance variables - replace the example below with your own
     private int numMastiles;
