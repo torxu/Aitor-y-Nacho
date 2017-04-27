@@ -1,61 +1,69 @@
-//Source file: C:\\Users\\Nacho\\Desktop\\UML programacion\\Puerto.java
-
-
-public class Puerto 
+public class Puerto
 {
-   private Alquiler[] amarres;
    
-   /**
-   @roseuid 58F88AF6033A
-    */
-   public Puerto() 
-   {
+    private Alquiler[] amarres;
     
-   }
-   
-   /**
-   @param numDias
-   @param barco
-   @roseuid 58F88B510179
-    */
-   public void alquilarAmarre(int numDias, Barco barco) 
-   {
+    public Puerto()
+    {
+        amarres = new Alquiler[4];
+    }
     
-   }
-   
-   /**
-   @param posicionAmarre int
-   @return boolean
-   @roseuid 58F88B6101C6
-    */
-   public boolean liquidarAlquiler(int posicionAmarre) 
-   {
-     return true;
-   }
-   
-   /**
-   @roseuid 58F88B92015C
-    */
-   public void verEstadoAmmarres() 
-   {
+    public float alquilarAmarre(int numDias, Barco barco)
+    {
+        float precio = -1;
+        if (hayAmarresLibres()){
+            int posicionAmarreAAlquilar = posicionPrimerAmarreLibre();
+            amarres[posicionAmarreAAlquilar] = new Alquiler(numDias, barco, posicionPrimerAmarreLibre());
+            precio = amarres[posicionAmarreAAlquilar].getPrecioAlquiler();
+        }
+        return precio;
+    }
     
-   }
-   
-   /**
-   @return int
-   @roseuid 58F88E0D0281
-    */
-   public int posicionPrimerAmarreLibre() 
-   {
-    return 0;
-   }
-   
-   /**
-   @return boolean
-   @roseuid 58F88E350322
-    */
-   public boolean hayAmarresLibres() 
-   {
-    return true;
-   }
+    public float liquidarAlquilerAmarre(int posicionAmarre)
+    {
+        float precio = -1;
+        if (posicionAmarre >= 0 && posicionAmarre < amarres.length && amarres[posicionAmarre] != null){
+            precio = amarres[posicionAmarre].getPrecioAlquiler();
+            amarres[posicionAmarre] = null;
+        }
+        return precio;
+    }
+    
+    public void verEstadoAmarres()
+    {
+        for (int i = 0; i < amarres.length; i++){
+            if (amarres[i] != null){
+                System.out.println(amarres[i].toString());
+            }
+        }
+    }
+    
+    public int posicionPrimerAmarreLibre()
+    {
+        int primerAmarrelibre = -1;
+        if (hayAmarresLibres()){
+            int i = 0;
+            while (i < amarres.length && primerAmarrelibre == -1){
+                if (amarres[i] == null){
+                    primerAmarrelibre = i;
+                }
+                i++;
+            }
+        }
+        return primerAmarrelibre;
+    }
+    
+    public boolean hayAmarresLibres()
+    {
+        boolean amarresLibres = false;
+        int i = 0;
+        while (i < amarres.length && amarresLibres == false){
+            if (amarres[i] == null){
+                amarresLibres = true;
+            }
+            i++;
+        }
+        return amarresLibres;
+    }
 }
+    
