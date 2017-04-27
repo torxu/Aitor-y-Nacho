@@ -1,17 +1,6 @@
-//Source file: C:\\Users\\Nacho\\Desktop\\UML programacion\\DeportivaAMotor.java
-
-
 public class DeportivaAMotor extends Barco 
 {
-   private int potenciaInteger;
-   
-   /**
-   @roseuid 58F89A0E0360
-    */
-   public DeportivaAMotor() 
-   {
-    
-   }
+   private int potencia;
    
    /**
    @param matricula
@@ -21,16 +10,21 @@ public class DeportivaAMotor extends Barco
    @param dueño
    @roseuid 58F8705E0230
     */
-   public DeportivaAMotor(int matricula, float eslora, int año, int potencia, Cliente dueño) 
+   public DeportivaAMotor(String matricula, float eslora, int anno, Cliente dueño, int potencia) 
    {
-    
+       super(matricula, eslora, anno, dueño);
+       this.potencia = potencia;
    }
    
-   /**
-   @roseuid 58F8877E02CE
-    */
    public String toString() 
    {
-    return "";
+       String cadena = "";
+       cadena += super.toString() + "\n" + "CV: " + potencia;
+       return cadena;
+   }
+   
+   public int getCoeficienteBernua()
+   {
+       return potencia;
    }
 }

@@ -3,41 +3,24 @@
 
 public class Cliente 
 {
-   private int nombreString;
-   private int DNIString;
-   public Barco theBarco;
-   
-   /**
-   @roseuid 58F89A0E03AE
-    */
-   public Cliente() 
-   {
-    
-   }
+   private String nombrePersona;
+   private String dniPersona;
    
    /**
    @param String nombre
    @param String DNI
    @roseuid 58F86C50028F
     */
-   public Cliente(String nombre, String DNI) 
+   public Cliente(String nombre, String dni) 
    {
-    
+       nombrePersona = nombre;
+       dniPersona = dni;
    }
    
-   /**
-   @roseuid 58F86C75001F
-    */
-   public void StringDNI() 
+   public String toString()
    {
-    
-   }
-   
-   /**
-   @roseuid 58F86C880281
-    */
-   public void StringGetNombre() 
-   {
-    
+       String nombreYDni = "";
+       nombreYDni += "Nombre: " + nombrePersona + "\n" + "DNI: " + dniPersona;
+       return nombreYDni;
    }
 }

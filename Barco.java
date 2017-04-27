@@ -3,19 +3,10 @@
 
 public class Barco 
 {
-   private int matriculaInt;
+   private String matricula;
    private Cliente dueño;
-   private int esloraFloat;
-   private int añoFabricaciónInt;
-   public Cliente theCliente;
-   
-   /**
-   @roseuid 58F89A0F002A
-    */
-   public Barco() 
-   {
-    
-   }
+   private float eslora;
+   private int anno;
    
    /**
    @param matricula
@@ -24,56 +15,28 @@ public class Barco
    @param dueño
    @roseuid 58F86D99032C
     */
-   public void BarcoBarco(int matricula, float eslora, int año, Cliente dueño) 
+   public Barco(String matricula, float eslora, int anno, Cliente dueño) 
    {
-    
+       this.matricula = matricula;
+       this.eslora = eslora;
+       this.anno = anno;
+       this.dueño = dueño;
    }
    
-   /**
-   @roseuid 58F8855B00D1
-    */
    public String toString() 
    {
-    return "0";
+       String cadena = "";
+       cadena += dueño + "\n" + "Matricula: " + matricula + "\n" + "Eslora: " + eslora + "\n" + "Año: " + anno;
+       return cadena;
    }
    
-   /**
-   @roseuid 58F86DAA0176
-    */
-   public void getMatricula() 
+   public String getMatricula() 
    {
-    
+       return matricula;
    }
    
-   /**
-   @roseuid 58F86DB30110
-    */
-   public void getEslora() 
+   public float getEslora() 
    {
-    
-   }
-   
-   /**
-   @roseuid 58F870350101
-    */
-   public void getNumMastiles() 
-   {
-    
-   }
-   
-   /**
-   @roseuid 58F870440346
-    */
-   public void getPotencia() 
-   {
-    
-   }
-   
-   /**
-   @roseuid 58F8704D03AF
-    */
-   public void getCamarotes() 
-   {
-    
+       return eslora;
    }
 }
