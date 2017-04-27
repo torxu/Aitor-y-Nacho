@@ -1,38 +1,22 @@
-
-/**
- * Write a description of class Velero here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Velero extends Barco
 {
-    // instance variables - replace the example below with your own
     private int numMastiles;
 
-    /**
-     * Constructor for objects of class Velero
-     */
-    public Velero()
+    public Velero(String matricula, float eslora, int anno, Cliente dueño, int mastiles)
     {
-        // initialise instance variables
-        
+        super(matricula, eslora, anno, dueño);
+        numMastiles = mastiles;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
     public String toString()
     {
-        // put your code here
-        return "0";
+        String cadena = "";
+        cadena += super.toString() + "\n" + "NºMastiles: " + numMastiles;
+        return cadena;
     }
     
     public int getCoeficienteDeBernua()
     {
-        return 0;
+        return numMastiles;
     }
 }
