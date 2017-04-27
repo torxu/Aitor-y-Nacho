@@ -1,11 +1,11 @@
 //Source file: C:\\Users\\Nacho\\Desktop\\UML programacion\\Barco.java
 
 
-public class Barco 
+public abstract class Barco 
 {
    private String matricula;
    private Cliente dueño;
-   private float eslora;
+   private double eslora;
    private int anno;
    
    /**
@@ -35,8 +35,10 @@ public class Barco
        return matricula;
    }
    
-   public float getEslora() 
+   public double getEslora() 
    {
        return eslora;
    }
+   
+   public abstract int getCoeficienteDeBernua();
 }

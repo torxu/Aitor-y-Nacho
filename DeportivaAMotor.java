@@ -27,4 +27,8 @@ public class DeportivaAMotor extends Barco
    {
        return potencia;
    }
+   public int getCoeficienteDeBernua()
+   {
+       return 0;
+   }
 }

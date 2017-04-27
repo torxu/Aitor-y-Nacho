@@ -27,7 +27,7 @@ public class Alquiler
     public float getPrecioAlquiler()
     {
         float precio = 0;
-        float eslora = (float)barco.getEslora();
+        double eslora = (double)barco.getEslora();
         precio = (diasOcupacion * (eslora * VALOR_MULTIPLICADOR_ESLORA)) + (VALOR_MULTIPLICADOR_BERNUA * barco.getCoeficienteBernua());
         return precio;
     }
