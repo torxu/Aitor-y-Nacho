@@ -4,7 +4,7 @@
 public abstract class Barco 
 {
    private String matricula;
-   private Cliente dueño;
+   private Persona dueño;
    private double eslora;
    private int anno;
    
@@ -15,7 +15,7 @@ public abstract class Barco
    @param dueño
    @roseuid 58F86D99032C
     */
-   public Barco(String matricula, float eslora, int anno, Cliente dueño) 
+   public Barco(String matricula, double eslora, int anno, Persona dueño) 
    {
        this.matricula = matricula;
        this.eslora = eslora;
@@ -40,5 +40,5 @@ public abstract class Barco
        return eslora;
    }
    
-   public abstract int getCoeficienteDeBernua();
+   public abstract int getCoeficienteBernua();
 }

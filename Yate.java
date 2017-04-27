@@ -1,14 +1,14 @@
 //Source file: C:\\Users\\Nacho\\Desktop\\UML programacion\\Yate.java
 
 
-public class Yate extends DeportivaAMotor 
+public class Yate extends EmbarcacionAMotor 
 {
    private int numCamarotes;
    
    /**
    @roseuid 58F89A0E0271
     */
-   public Yate(String matricula, float eslora, int anno, Cliente dueño, int potencia, int camarotes) 
+   public Yate(String matricula, double eslora, int anno, Persona dueño, int potencia, int camarotes) 
    {
        super(matricula, eslora, anno, dueño, potencia);
        numCamarotes = camarotes;

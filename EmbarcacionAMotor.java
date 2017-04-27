@@ -1,4 +1,4 @@
-public class DeportivaAMotor extends Barco 
+public class EmbarcacionAMotor extends Barco 
 {
    private int potencia;
    
@@ -10,7 +10,7 @@ public class DeportivaAMotor extends Barco
    @param dueño
    @roseuid 58F8705E0230
     */
-   public DeportivaAMotor(String matricula, float eslora, int anno, Cliente dueño, int potencia) 
+   public EmbarcacionAMotor(String matricula, double eslora, int anno, Persona dueño, int potencia) 
    {
        super(matricula, eslora, anno, dueño);
        this.potencia = potencia;

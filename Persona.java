@@ -1,7 +1,7 @@
 //Source file: C:\\Users\\Nacho\\Desktop\\UML programacion\\Cliente.java
 
 
-public class Cliente 
+public class Persona
 {
    private String nombrePersona;
    private String dniPersona;
@@ -11,7 +11,7 @@ public class Cliente
    @param String DNI
    @roseuid 58F86C50028F
     */
-   public Cliente(String nombre, String dni) 
+   public Persona(String nombre, String dni) 
    {
        nombrePersona = nombre;
        dniPersona = dni;

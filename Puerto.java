@@ -8,9 +8,9 @@ public class Puerto
         amarres = new Alquiler[4];
     }
     
-    public float alquilarAmarre(int numDias, Barco barco)
+    public double alquilarAmarre(int numDias, Barco barco)
     {
-        float precio = -1;
+        double precio = -1;
         if (hayAmarresLibres()){
             int posicionAmarreAAlquilar = posicionPrimerAmarreLibre();
             amarres[posicionAmarreAAlquilar] = new Alquiler(numDias, barco, posicionPrimerAmarreLibre());
@@ -19,9 +19,9 @@ public class Puerto
         return precio;
     }
     
-    public float liquidarAlquilerAmarre(int posicionAmarre)
+    public double liquidarAlquilerAmarre(int posicionAmarre)
     {
-        float precio = -1;
+        double precio = -1;
         if (posicionAmarre >= 0 && posicionAmarre < amarres.length && amarres[posicionAmarre] != null){
             precio = amarres[posicionAmarre].getPrecioAlquiler();
             amarres[posicionAmarre] = null;

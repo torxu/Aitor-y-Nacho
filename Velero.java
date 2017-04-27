@@ -2,7 +2,7 @@ public class Velero extends Barco
 {
     private int numMastiles;
 
-    public Velero(String matricula, float eslora, int anno, Cliente dueño, int mastiles)
+    public Velero(String matricula, double eslora, int anno, Persona dueño, int mastiles)
     {
         super(matricula, eslora, anno, dueño);
         numMastiles = mastiles;
@@ -15,7 +15,7 @@ public class Velero extends Barco
         return cadena;
     }
     
-    public int getCoeficienteDeBernua()
+    public int getCoeficienteBernua()
     {
         return numMastiles;
     }
