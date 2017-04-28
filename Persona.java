@@ -1,10 +1,13 @@
-
+/**
+ * Clase persona
+ */
 public class Persona
 {
    private String nombrePersona;
    private String dniPersona;
    
    /**
+    * Constructor de la clase persona
    @param String nombre
    @param String DNI
     */
@@ -13,7 +16,11 @@ public class Persona
        nombrePersona = nombre;
        dniPersona = dni;
    }
-   
+ 
+   /**
+    * Metodo que devuelve una cadena String
+    * @return String
+    */
    public String toString()
    {
        String nombreYDni = "";

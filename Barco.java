@@ -1,6 +1,6 @@
-//Source file: C:\\Users\\Nacho\\Desktop\\UML programacion\\Barco.java
-
-
+/**
+ * Clase padre, utilizada por las clases EmbarcacionAMotor y Velero
+ */
 public abstract class Barco 
 {
    private String matricula;
@@ -9,11 +9,12 @@ public abstract class Barco
    private int anno;
    
    /**
-   @param matricula
-   @param eslora
-   @param año
-   @param dueño
-   @roseuid 58F86D99032C
+    * Constructor de la clase Barco
+    * @param matricula String
+    * @param eslora double
+    * @param año int
+    * @param dueño Persona
+    * @roseuid 58F86D99032C
     */
    public Barco(String matricula, double eslora, int anno, Persona dueño) 
    {
@@ -22,23 +23,35 @@ public abstract class Barco
        this.anno = anno;
        this.dueño = dueño;
    }
-   
+
+   /**
+    * Metodo toString para devolver los datos de Barco
+    * @return String
+    */
    public String toString() 
    {
        String cadena = "";
        cadena += dueño + "\n" + "Matricula: " + matricula + "\n" + "Eslora: " + eslora + "\n" + "Año: " + anno;
        return cadena;
    }
-   
+
+   /**
+    * Devuelve el atributo matricula
+    * @return String
+    */
    public String getMatricula() 
    {
        return matricula;
    }
-   
+
+   /**
+    * Devuelve el atributo eslora
+    * @return double
+    */
    public double getEslora() 
    {
        return eslora;
    }
-   
+     
    public abstract int getCoeficienteBernua();
 }

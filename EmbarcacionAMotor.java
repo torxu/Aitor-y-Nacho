@@ -1,14 +1,18 @@
+/**
+ * Clase EmbarcacionAMotor, que cuelga de Barco
+ */
 public class EmbarcacionAMotor extends Barco 
 {
    private int potencia;
    
    /**
-   @param matricula
-   @param eslora
-   @param año
-   @param potencia
-   @param dueño
-   @roseuid 58F8705E0230
+    * Constructor de la clase EmbarcacionAMotor
+    * @param matricula
+    * @param eslora
+    * @param año
+    * @param potencia
+    * @param dueño
+    * @roseuid 58F8705E0230
     */
    public EmbarcacionAMotor(String matricula, double eslora, int anno, Persona dueño, int potencia) 
    {
@@ -16,17 +20,26 @@ public class EmbarcacionAMotor extends Barco
        this.potencia = potencia;
    }
    
+   /**
+    * Metodo toString que devuelve una cadena
+    * @return String
+    */
    public String toString() 
    {
        String cadena = "";
        cadena += super.toString() + "\n" + "CV: " + potencia;
        return cadena;
    }
-   
+
+   /**
+    * Metodo que devuelve el coeficiente de Bernua
+    * @return int
+    */
    public int getCoeficienteBernua()
    {
        return potencia;
    }
+   
    public int getCoeficienteDeBernua()
    {
        return 0;
