@@ -12,8 +12,10 @@ public class Alquiler
     private static final int VALOR_MULTIPLICADOR_ESLORA = 10;
     private static final int VALOR_MULTIPLICADOR_BERNUA = 300;
     /**
-     * 
-     * 
+     * Constructor for class Alquiler that initialises the atributtes
+     * @param numDias whole number that saves how much amount will the ship be in the amarre
+     * @param barco Barco that saves the info of the ship
+     * @param posicionAmarre whole number that saves the position in the amarre
      */
     public Alquiler(int numDias, Barco barco, int posicionAmarre)
     {
@@ -22,6 +24,10 @@ public class Alquiler
         this.barco = barco;
     }
     
+    /**
+     * Method toString that returns the info of the rent
+     * @return String chain of characters
+     */
     public String toString()
     {
         String textoADevolver = "";
@@ -31,6 +37,10 @@ public class Alquiler
         return textoADevolver;
     }
     
+    /**
+     * Method that returns the prize of the rent
+     * @return double the amount of money to pay
+     */
     public double getPrecioAlquiler()
     {
         double precio = 0;
