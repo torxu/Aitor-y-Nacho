@@ -11,7 +11,10 @@ public class Alquiler
     
     private static final int VALOR_MULTIPLICADOR_ESLORA = 10;
     private static final int VALOR_MULTIPLICADOR_BERNUA = 300;
-    
+    /**
+     * 
+     * 
+     */
     public Alquiler(int numDias, Barco barco, int posicionAmarre)
     {
         diasOcupacion = numDias;
