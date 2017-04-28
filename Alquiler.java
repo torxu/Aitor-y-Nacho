@@ -1,3 +1,7 @@
+/**
+ * Class called Rent that it's main function is to give us the prize of a Ship Rent
+ * @author Nacho
+ */
 public class Alquiler
 {
     

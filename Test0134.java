@@ -27,7 +27,7 @@ public class Test0134
     }
 
 
-
+@Test
     public void test1()
 
     {

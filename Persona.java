@@ -1,5 +1,3 @@
-//Source file: C:\\Users\\Nacho\\Desktop\\UML programacion\\Cliente.java
-
 
 public class Persona
 {
@@ -9,7 +7,6 @@ public class Persona
    /**
    @param String nombre
    @param String DNI
-   @roseuid 58F86C50028F
     */
    public Persona(String nombre, String dni) 
    {
